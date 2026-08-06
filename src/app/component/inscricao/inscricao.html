@@ -1,0 +1,17 @@
+<section id="inscricao" class="inscricao-container">
+  <div class="inscricao-header">
+    <h2>🌱 Como se <span>Inscrever</span></h2>
+    <h3>Torne-se um cooperado da Raiz Brasil</h3>
+    <p>Faça parte de uma cooperativa que valoriza o produtor rural, promove o crescimento coletivo e oferece soluções para fortalecer a produção agropecuária.</p>
+  </div>
+
+  <div class="passos-grid">
+    @for (passo of passos; track $index) {
+      <div class="passo-card">
+        <div class="passo-numero">{{ passo.numero }}</div>
+        <h4>{{ passo.titulo }}</h4>
+        <p>{{ passo.texto }}</p>
+      </div>
+    }
+  </div>
+</section>

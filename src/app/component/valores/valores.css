@@ -1,0 +1,92 @@
+/* O degradê começa claro e termina no verde do footer (#005041) */
+.sobre-nos {
+    background: linear-gradient(to bottom, #EAF5F2 0%, #005041 100%);
+    padding: 80px 5% 150px 5%; /* O padding-bottom é maior para emendar suavemente no footer */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Estilo padronizado para os três blocos */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    /* Se quiser que os ícones fiquem verdes, mantenha o filtro abaixo */
+    filter: invert(18%) sepia(85%) saturate(2035%) hue-rotate(152deg) brightness(96%) contrast(101%);
+}
+
+.card h1 {
+    color: #005041;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Detalhe dourado abaixo dos títulos */
+.card h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #FFD700;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.card p {
+    color: #555555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Estilização específica da lista de Valores */
+.valores ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.valores ul li {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Criando um bullet customizado verde para a lista */
+.valores ul li::before {
+    content: '•';
+    color: #005041;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+.valores ul li strong {
+    color: #005041;
+}
+
+/* === Responsividade === */
+@media (max-width: 960px) {
+    .sobre-nos {
+        padding: 60px 5% 100px 5%;
+    }
+}

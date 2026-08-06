@@ -1,0 +1,140 @@
+/* O container em formato de "cartão" centralizado na tela com fundo original */
+.quem-somos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  max-width: 1100px; /* Largura ajustada para o formato quadrado (aprox. 550x550) */
+  margin: 80px auto;
+  border-radius: 16px;
+  overflow: hidden; /* Faz com que a imagem não vaze pelas bordas arredondadas */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #005041; /* Voltou para o fundo verde original */
+}
+
+/* === Lado Esquerdo: Carrossel === */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 550px; /* Altura fixa para manter o formato quadrado */
+  background-color: #003a2f; 
+}
+
+.carousel-content {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche perfeitamente o quadrado sem distorcer a imagem */
+  display: block;
+  animation: fade 0.8s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* Indicadores (Bolinhas) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dot.active {
+  background-color: #FFD700;
+  transform: scale(1.2);
+}
+
+/* === Lado Direito: Textos === */
+.texto-wrapper {
+  color: #FFFFFF; /* Fonte voltou para a cor branca original */
+  padding: 40px 10%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.texto-wrapper h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.texto-wrapper h1 span {
+  color: #FFD700; /* Palavra em destaque na cor dourada */
+}
+
+.texto-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  font-weight: 400; /* Peso normal da fonte restaurado */
+}
+
+/* Botão original restaurado */
+.btn-saiba-mais {
+  align-self: flex-start;
+  background-color: #FFD700; /* Fundo dourado */
+  color: #005041; /* Letra verde */
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-saiba-mais:hover {
+  background-color: #ffffff; /* Hover original (fica branco) */
+  color: #005041;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* === Responsividade === */
+@media (max-width: 960px) {
+  .quem-somos-container {
+    grid-template-columns: 1fr; /* Coloca a imagem em cima e o texto embaixo */
+    max-width: 600px; /* Limita a largura no tablet/celular */
+  }
+
+  .carousel-wrapper {
+    min-height: 400px;
+  }
+
+  .texto-wrapper {
+    padding: 50px 8%;
+    text-align: center;
+  }
+
+  .btn-saiba-mais {
+    align-self: center;
+  }
+}

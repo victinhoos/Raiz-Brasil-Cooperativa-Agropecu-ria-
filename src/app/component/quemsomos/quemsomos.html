@@ -1,0 +1,26 @@
+<section id="sobre-nos" class="quem-somos-container">
+  
+  <!-- Lado Esquerdo: Carrossel Automático -->
+  <div class="carousel-wrapper">
+    <div class="carousel-content">
+      <img [src]="images[currentIndex]" alt="Imagens da Cooperativa" class="carousel-image">
+    </div>
+    
+    <!-- Indicadores (Bolinhas) -->
+    <div class="carousel-indicators">
+      <span *ngFor="let img of images; let i = index" 
+            class="dot" 
+            [class.active]="i === currentIndex" 
+            (click)="goToIndex(i)">
+      </span>
+    </div>
+  </div>
+
+  <!-- Lado Direito: Texto -->
+  <div class="texto-wrapper">
+    <h1>Quem <span>Somos?</span></h1>
+    <p>A Raiz Brasil Cooperativa Agropecuária (CRB) fortalece produtores rurais do Agreste de Pernambuco por meio da cooperação, inovação e desenvolvimento sustentável, promovendo crescimento para o campo e para a comunidade.</p>
+
+  </div>
+
+</section>

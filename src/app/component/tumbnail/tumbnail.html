@@ -1,0 +1,30 @@
+<header>
+    <div class="header-content-wrapper">
+        <img src="assets/imgs/tumbnail.jpeg" alt="Fotografia..." class="img-fundo">
+        
+        <div class="header-texto-sobreposto">
+            <h1 id="h1-thumbnail">Raiz Brasil Cooperativa Agropecuária</h1>
+            <h2>Da terra nasce a força da cooperação</h2>
+        </div>
+        
+        <nav>
+            <!-- Aponta para a seção Missão, Visão e Valores -->
+            <div class="box-nav" (click)="scrollTo('sobre-nos')">
+                <img src="assets/icons/star.svg" alt="Sobre Nós">
+                <p>Sobre Nós</p>
+            </div>
+            
+            <!-- Aponta para a seção de Serviços -->
+            <div class="box-nav" (click)="scrollTo('servicos')">
+                <img src="assets/icons/hearlth.svg" alt="Serviços">
+                <p>Serviços</p>
+            </div>
+            
+            <!-- Aponta para a seção de Inscrição -->
+            <div class="box-nav" (click)="scrollTo('inscricao')">
+                <img src="assets/icons/mail.svg" alt="Inscreva-se">
+                <p>Inscreva-se</p>
+            </div>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,16 @@
+<section id="sobre-nos" class="sobre-nos">
+    <div class="servicos-header">
+        <h2>Nossos <span>Serviços</span> e Benefícios</h2>
+        <p>Soluções pensadas para o crescimento do produtor rural e o fortalecimento do cooperativismo.</p>
+    </div>
+
+    <div class="servicos-grid">
+        @for (servico of listaServicos; track $index) {
+            <div class="card-servico">
+                <div class="icone-wrapper">{{ servico.icone }}</div>
+                <h1>{{ servico.titulo }}</h1>
+                <p>{{ servico.texto }}</p>
+            </div>
+        }
+    </div>
+</section>

@@ -1,0 +1,95 @@
+.servicos {
+    padding: 80px 5%;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #EAF5F2; /* Fundo claro para contrastar com os cards brancos */
+    text-align: center;
+}
+
+/* === Cabeçalho da Seção === */
+.servicos-header {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.servicos-header h2 {
+    color: #005041; /* Verde primário */
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.servicos-header h2 span {
+    color: #FFD700; /* Detalhe em dourado */
+}
+
+.servicos-header p {
+    color: #333333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* === Grid dos Cards === */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Estilo Individual do Card === */
+.card-servico {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid #FFD700; /* Barrinha dourada charmosa na base */
+}
+
+/* Efeito Hover do Card */
+.card-servico:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 80, 65, 0.15);
+}
+
+.icone-wrapper {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background-color: #EAF5F2; /* Círculo de fundo para o emoji/ícone */
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.card-servico h1 {
+    color: #005041;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.card-servico p {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+    .servicos {
+        padding: 60px 5%;
+    }
+
+    .servicos-header h2 {
+        font-size: 2rem;
+    }
+}

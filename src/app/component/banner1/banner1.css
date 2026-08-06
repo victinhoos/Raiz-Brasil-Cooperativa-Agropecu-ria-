@@ -1,0 +1,52 @@
+/* Container ocupa 100% da tela e define a cor de fundo exigida */
+.banner-container {
+  width: 100%;
+  height: 280px; /* Altura original especificada */
+  background-color: #015041; /* Cor de fundo exigida */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Envolve as imagens limitando ao tamanho máximo de 1920px */
+.banner-content {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  position: relative;
+}
+
+/* Esconde todas as imagens por padrão e as posiciona uma sobre a outra */
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  opacity: 0; /* Invisível */
+  transition: opacity 1.5s ease-in-out; /* Transição suave de 1.5s */
+  z-index: 0;
+}
+
+/* Quando a imagem recebe a classe 'active', ela aparece */
+.banner-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* === Responsividade === */
+/* Para telas menores (celulares), reduzimos a altura para o banner não ocupar a tela toda */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 160px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    height: 120px;
+  }
+}
