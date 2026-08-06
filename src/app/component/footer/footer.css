@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 footer {
   background-color: #005041;
@@ -10,9 +10,8 @@ footer {
   margin-top: 0; /* Antes estava 140px, mude para 0 */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Deixe apenas UM bloco do footer e com margin-top: 0; */
+
 footer {
   background-color: #005041;
   color: #FFFFFF;
